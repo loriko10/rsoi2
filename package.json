@@ -2,13 +2,27 @@
   "name": "lab",
   "version": "1.0.0",
   "scripts": {
-    "install": "cd gateway; npm i; cd users; npm i; cd ../tasks; npm i; cd ../events; npm i;",
-    "test": "cd users; npm run test; cd ../tasks; npm run test; cd ../events; npm run test;",
-    "coverage": "cd users; npm run test-coverage; cd ../tasks; npm run test-coverage; cd ../events; npm run test-coverage;",
-    "migrate": "cd users; npm run migrate; cd ../tasks; npm run migrate; cd ../events; npm run migrate;",
-    "seed": "cd users; npm run db:seed:all; cd ../tasks; npm run db:seed:all; cd ../events; npm run db:seed:all;"
+    "test": "cd users; npm run test; cd ../comments; npm run test; cd ../questions; npm run test;",
+    "coverage": "cd users; npm run test-coverage; cd ../comments; npm run test-coverage; cd ../questions; npm run test-coverage;",
+    "migrate": "cd users; npm run migrate; cd ../comments; npm run migrate; cd ../questions; npm run migrate;",
+    "seed": "cd users; npm run db:seed:all; cd ../comments; npm run db:seed:all; cd ../questions; npm run db:seed:all;"
   },
   "dependencies": {
-    "winston": "^3.2.1"
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "heroku": "^7.35.0",
+    "jest": "^24.9.0",
+    "path": "^0.12.7",
+    "pg": "^7.17.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1",
+    "supertest": "^4.0.2",
+    "winston": "^3.1.0",
+    "yargs": "^15.1.0"
+  },
+  "engines": {
+    "node": "8.16.x",
+    "npm": "6.4.x"
   }
 }
