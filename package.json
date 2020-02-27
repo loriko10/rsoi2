@@ -1,0 +1,14 @@
+{
+  "name": "lab",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "cd gateway; npm i; cd users; npm i; cd ../tasks; npm i; cd ../events; npm i;",
+    "test": "cd users; npm run test; cd ../tasks; npm run test; cd ../events; npm run test;",
+    "coverage": "cd users; npm run test-coverage; cd ../tasks; npm run test-coverage; cd ../events; npm run test-coverage;",
+    "migrate": "cd users; npm run migrate; cd ../tasks; npm run migrate; cd ../events; npm run migrate;",
+    "seed": "cd users; npm run db:seed:all; cd ../tasks; npm run db:seed:all; cd ../events; npm run db:seed:all;"
+  },
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
+}
