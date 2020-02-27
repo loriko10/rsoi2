@@ -11,7 +11,7 @@
     "db:drop": "npx sequelize-cli db:drop",
     "db:seed:all": "npx sequelize-cli db:seed:all",
     "db:makeQuestion": "npx sequelize-cli model:generate --name Question --attributes title:string,text:string,uid:integer,date:string,tag:string --force",
-    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
+    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate"
   },
   "dependencies": {
     "dotenv": "^8.1.0",
